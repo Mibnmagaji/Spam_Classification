@@ -7,7 +7,7 @@ It is often that we need to incorporate information in text into our model in ma
 ## Model Structure
 The CNN architecture is inspired by Zhang, Y., & Wallace, B. (2015) ["A Sensitivity Analysis of (and Practitioners’ Guide to) Convolutional Neural Networks for Sentence Classification"](https://arxiv.org/pdf/1510.03820.pdf) and [this article](https://towardsdatascience.com/another-twitter-sentiment-analysis-with-python-part-11-cnn-word2vec-41f5e28eda74)
 
-![Model Structure](Model Structure.jpg)
+[Model Structure](Model Structure.jpg)
 
 The above structure is specificly designed for word vectors input. First we can see that the width of each filter is exactly the same as the input width, reason for it is that a word vector contains information of the word as a whole. The other interesting part is the different size of filters, looking it closely we can see that they are actually filters that try to capture bigram, trigram, and fourgram information. After convolutional layer and max pooling layer, it simply concatenated max pooled result from each of bigram, trigram, and fourgram, then build one output layer on top of them. The actual model we will be using is similiar to the defined structure, but we added one fully connected hidden layer with dropout before the output layer since we will be using larger number of filters comparing to the example. 
 
