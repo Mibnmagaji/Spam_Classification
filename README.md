@@ -1,5 +1,5 @@
 # Spam_Classification
-A project on using 1. Different word embedding with CNN and 2. RNN-based models to classify spam.
+A tiny practice on using 1. Different word embedding with CNN and 2. RNN-based models to classify spam.
 
 ## Project Introduction
 It is often that we need to incorporate information in text into our model in machine learning tasks. However, machine can't read words like we do, therefore we would have to perform word embedding in order to transfer the words into numerical vectors. In this project, we use two different approach to classify spam. In the first approach we aim to do serveral embedding, including tradional bag-of-words models such as word count, tf-idf score and more recent vector-space models such as Word2vec and NN embedding, then model the extracted features to classify our data in to spam/ham with a special structured CNN (Convolutional Neural Network). The second approach uses serveral RNN models to classify text, such as LSTM and bidirectional GRU with attention mechanism. 
